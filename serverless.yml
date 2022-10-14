@@ -1,0 +1,23 @@
+service: aws-ec2-handler
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+plugins:
+  - serverless-esbuild
+
+functions:
+  listAllEC2Instances:
+    handler: handler.listAllEC2Instances
+    events:
+      - httpApi:
+          path: /listAllEC2Instances
+          method: get
+  createEC2Instance:
+    handler: handler.createEC2Instance
+    events:
+      - httpApi:
+          path: /createEC2Instance
+          method: post
