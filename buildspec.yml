@@ -13,6 +13,6 @@ phases:
     build:
       commands:
         - echo Starting To Deploy The Service ...
-        - sls deploy --stage dev
+        - serverless deploy --stage dev
         - echo Finished Deploying The Service.
       
