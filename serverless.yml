@@ -1,4 +1,4 @@
-service: aws-ec2-handler
+service: ec2-handler
 frameworkVersion: "3"
 
 provider:
