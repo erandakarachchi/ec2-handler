@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-version:
+      nodejs:14
+    commands:
+      - echo Installing Dependencies
+      - npm install -g serverless@3.22.0
+      - cd /aws-ec2-handler
+      - npm install
+      - echo Finished Installing Dependencies
+    build:
+      commands:
+        - echo Starting To Deploy The Service ...
+        - sls deploy --stage dev
+        - echo Finished Deploying The Service.
+      
