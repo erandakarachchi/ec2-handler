@@ -10,9 +10,9 @@ phases:
       - pwd
       - npm install
       - echo Finished Installing Dependencies
-    build:
-      commands:
-        - echo Starting To Deploy The Service ...
-        - serverless deploy --stage dev
-        - echo Finished Deploying The Service.
+  build:
+    commands:
+      - echo Starting To Deploy The Service ...
+      - serverless deploy --stage dev
+      - echo Finished Deploying The Service.
       
